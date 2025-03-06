@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+  <body style="background-image: url(./glass.jpg);background-size: cover; height: 100vh; font-family: Helvetica, Noto Sans, sans-serif">
+    
+    <div style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.25); color: #fff; justify-content: space-between;">
+        <p style="margin-left: 16px;">
+            teaOS
+        </p> 
+        <p id="timeElement"; style="margin-right: 16px;"></p>
+    </div>
+    
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: solid; padding: 16px; border-width: 1em; border-image: repeating-linear-gradient(30deg, #69beb3, #dc9421, #69beb3 30px) 30; background-color: #69beb3c2">
+        <h1>is this thing on?</h1>
+        <h2>this is my first time playing with html</h2>
+        <p>(if i don't count my tumblr days of stumbling my way through someone else's code)</p>
+
+    <div>
+
+    <script>
+        function updateTime() {
+            var currentTime = new Date().toLocaleString();
+            var timeText = document.querySelector("#timeElement");
+            timeText.innerHTML = currentTime;
+        }
+        setInterval(updateTime, 1000);
+    </script>
+
+  </body>
+
+</html>
+
+    <!-- </div>
+        <img src="./vanilla.jpg"
+        alt="alt text" 
+        width="300"
+        height="300"/>
+        <img style="width: 256px; height: fit-content"
+        src="almond.jpg" />
+        
+        <p></p>
+        
+        <a href="https://fynthesizer.github.io/Drip/"
+        >here</a> is how you link a website
+        <p></p>
+        
+        <s>Strike Through</s>
+        <p>break the </br> line like this</p>
+        <p>use strong to <strong>bold text</strong></p>
+        <p> <dfn>DFN Tag</dfn> is a tag that marks something being defined</p>
+        <p><abbr title="abbreviation">abbr</abbr> is a tag that marks an abbreviated term</p>
+        <p style="color: red">This text is red</p>
+    </div> -->
