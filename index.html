@@ -1,53 +1,257 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>tea.os</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-  <body style="background-image: url(./glass.jpg);background-size: cover; height: 100vh; font-family: Helvetica, Noto Sans, sans-serif">
-    
-    <div style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.25); color: #fff; justify-content: space-between;">
-        <p style="margin-left: 16px;">
-            teaOS
-        </p> 
-        <p id="timeElement"; style="margin-right: 16px;"></p>
-    </div>
-    
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: solid; padding: 16px; border-width: 1em; border-image: repeating-linear-gradient(30deg, #69beb3, #dc9421, #69beb3 30px) 30; background-color: #69beb3c2">
-        <h1>is this thing on?</h1>
-        <h2>this is my first time playing with html</h2>
-        <p>(if i don't count my tumblr days of stumbling my way through someone else's code)</p>
+    <body style="background-image: linear-gradient(#120949,#04444F, #371906); background-size: cover; height: 100vh; font-family: Helvetica, Noto Sans, sans-serif;">
 
-    <div>
+        <div id="basic" class="window" style="margin: 32px; width: 250px; position: absolute; top: calc(10% - 90px)">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                basic window
+                </div>
 
-    <script>
-        function updateTime() {
-            var currentTime = new Date().toLocaleString();
-            var timeText = document.querySelector("#timeElement");
-            timeText.innerHTML = currentTime;
-        }
-        setInterval(updateTime, 1000);
-    </script>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p>window text box</p>
+
+                <section class="field-row" style="justify-content: flex-end">
+                    <button>button1</button>
+                    <button>button2</button>
+                </section>
+            </div>
+        </div>
+
+        <div id="check" class="window" style="margin: 32px; width: 250px; position: absolute;top: calc(20% - 90px)">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                check box window
+                </div>
+
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="field-row">
+                    <input checked type="checkbox" id="example2">
+                    <label for="example2">I am checked</label>
+                </div>
+                <div class="field-row">
+                    <input disabled type="checkbox" id="example3">
+                    <label for="example3">I am inactive</label>
+                </div>
+                <div class="field-row">
+                    <input checked disabled type="checkbox" id="example4">
+                    <label for="example4">I am inactive but still checked</label>
+                </div> 
+            </div>
+        </div>       
+
+        <div id="radio" class="window" style="margin: 32px; width: 250px; position: absolute;top: calc(30% - 90px)">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                radio button window
+                </div>
+
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+
+                <div class="field-row">
+                    <input id="radio7" type="radio" name="second-example">
+                    <label for="radio7">radio</label>
+                </div>
+                <div class="field-row">
+                    <input checked disabled id="radio8" type="radio" name="second-example">
+                    <label for="radio8">checked disabled radio</label>
+                </div>
+                <div class="field-row">
+                    <input disabled id="radio9" type="radio" name="second-example">
+                    <label for="radio9">disabled radio</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="legend" class="window" style="margin: 32px; width: 250px; position: absolute;top: calc(40% - 90px)">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                legend radio button window
+                </div>
+
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+
+                <fieldset>
+                    <legend>legend</legend>
+                    <div class="field-row">
+                        <input id="radio13" type="radio" name="fieldset-example2">
+                        <label for="radio13">choice 1</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="radio14" type="radio" name="fieldset-example2">
+                        <label for="radio14">choice 2</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="radio15" type="radio" name="fieldset-example2">
+                        <label for="radio15">choice 3</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="radio16" type="radio" name="fieldset-example2">
+                        <label for="radio16">choice 4</label>
+                    </div>
+                </fieldset>
+            </div>          
+        </div>
+
+        <div id="text" class="window" style="margin: 32px; width: 250px; position: absolute;top: calc(54% - 90px)">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                textbox window
+                </div>
+
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="field-row-stacked" style="width: 200px">
+                    <label for="text18">textbox 1</label>
+                    <input id="text18" type="text" />
+                </div>
+                <div class="field-row-stacked" style="width: 200px">
+                    <label for="text19">textbox 2</label>
+                    <input id="text19" type="text" />
+                </div>
+
+                <div class="field-row-stacked" style="width: 200px">
+                    <label for="text20">multiline textbox</label>
+                    <textarea id="text20" rows="8"></textarea>
+                </div>
+
+                <div class="field-row">
+                    <label for="text21">disabled text box</label>
+                    <input id="text21" disabled type="text" value="value"/>
+                </div>
+            </div>
+        </div>
+
+        <div id="volume" class="window" style="margin: 32px; width: 250px; position: absolute;top: calc(10% - 90px); left: calc(40%)">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                volume window
+                </div>
+
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="field-row" style="width: 200px; accent-color: #04444F;">
+                    <label for="range22">volume:</label>
+                    <label for="range23">low</label>
+                    <input id="range23" type="range" min="0" max="10" value="5" />
+                    <label for="range24">high</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="vertical" class="window" style="margin: 32px; width: 175px; height: 175px; position: absolute; top: calc(17% - 90px); left: calc(40%)">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                volume window vertical
+                </div>
+
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+                <div class="field-row">
+                <label for="range25">volume vertical</label>
+                <div class="is-vertical">
+                    <input id="range25" class="has-box-indicator" type="range" min="1" max="3" step="1" value="2" />
+                </div>
+                </div>
+        </div>
+
+        <div id="drop" class="window" style="margin: 32px; width: 250px; position: absolute;top: calc(35% - 90px); left: calc(40%)">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                drop down window
+                </div>
+
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <select>
+                <option>option 5</option>
+                <option>option 4</option>
+                <option selected>option 3</option>
+                <option>option 2</option>
+                <option>option 1</option>
+            </select>
+        </div>
+
+        <div class="start_menu">
+            </div>
+            <div class="start_bar">
+                <div class="top_border"></div>
+                <div class="start_button">
+                    <span class="logo">
+                    </span>
+                    <span class="text">
+                        Start
+                    </span>
+                </div>
+                <span class="big_seperator">
+                </span>
+                <span class="small_seperator">
+                </span>
+                <span class="application_icons">
+                </span>
+                <span class="big_seperator">
+                </span>
+                <span class="small_seperator">
+                </span>
+                <div class="tray">
+                    <span id="timeElement"></span>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+    <script src="script.js"></script>
 
   </body>
 
 </html>
-
-    <!-- </div>
-        <img src="./vanilla.jpg"
-        alt="alt text" 
-        width="300"
-        height="300"/>
-        <img style="width: 256px; height: fit-content"
-        src="almond.jpg" />
-        
-        <p></p>
-        
-        <a href="https://fynthesizer.github.io/Drip/"
-        >here</a> is how you link a website
-        <p></p>
-        
-        <s>Strike Through</s>
-        <p>break the </br> line like this</p>
-        <p>use strong to <strong>bold text</strong></p>
-        <p> <dfn>DFN Tag</dfn> is a tag that marks something being defined</p>
-        <p><abbr title="abbreviation">abbr</abbr> is a tag that marks an abbreviated term</p>
-        <p style="color: red">This text is red</p>
-    </div> -->

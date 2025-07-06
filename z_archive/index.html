@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>98.css example</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="modded_98.css" />
+    </head>
+
+    <body style="background-image: linear-gradient(#120949,#04444F, #371906); background-size: cover; height: 100vh; font-family: Helvetica, Noto Sans, sans-serif;">
+
+        <!-- <div style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.25); color: #fff; justify-content: space-between;">
+            <p style="margin-left: 16px;">
+            teaOS
+            </p> 
+            <p id="timeElement"; style="margin-right: 16px;"></p>
+        </div> -->
+
+        <div class="window" style="margin: 32px; width: 250px; position: absolute;top: calc(10% - 90px)">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                basic window
+                </div>
+
+                <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <p>window text box</p>
+
+                <section class="field-row" style="justify-content: flex-end">
+                    <button>button1</button>
+                    <button>button2</button>
+                </section>
+            </div>
+        </div>
+
+        <div class="window" style="margin: 32px; width: 250px; position: absolute;top: calc(20% - 90px)">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                check box window
+                </div>
+
+                <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="field-row">
+                    <input checked type="checkbox" id="example2">
+                    <label for="example2">I am checked</label>
+                </div>
+                <div class="field-row">
+                    <input disabled type="checkbox" id="example3">
+                    <label for="example3">I am inactive</label>
+                </div>
+                <div class="field-row">
+                    <input checked disabled type="checkbox" id="example4">
+                    <label for="example4">I am inactive but still checked</label>
+                </div> 
+
+                <section class="field-row" style="justify-content: flex-end">
+                    <button>button1</button>
+                    <button>button2</button>
+                </section>
+            </div>
+        </div>       
+
+        <div class="window" style="margin: 32px; width: 250px; position: absolute;top: calc(35% - 90px)">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                radio button window
+                </div>
+
+                <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+
+                <div class="field-row">
+                    <input id="radio7" type="radio" name="second-example">
+                    <label for="radio7">radio</label>
+                </div>
+                <div class="field-row">
+                    <input checked disabled id="radio8" type="radio" name="second-example">
+                    <label for="radio8">checked disabled radio</label>
+                </div>
+                <div class="field-row">
+                    <input disabled id="radio9" type="radio" name="second-example">
+                    <label for="radio9">disabled radio</label>
+                </div>
+
+                <section class="field-row" style="justify-content: flex-end">
+                    <button>button1</button>
+                    <button>button2</button>
+                </section>
+
+            </div>
+            </div>
+
+        <div class="window" style="margin: 32px; width: 250px; position: absolute;top: calc(50% - 90px)">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                legend radio button window
+                </div>
+
+                <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+
+                <fieldset>
+                    <legend>legend</legend>
+                    <div class="field-row">
+                        <input id="radio13" type="radio" name="fieldset-example2">
+                        <label for="radio13">choice 1</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="radio14" type="radio" name="fieldset-example2">
+                        <label for="radio14">choice 2</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="radio15" type="radio" name="fieldset-example2">
+                        <label for="radio15">choice 3</label>
+                    </div>
+                    <div class="field-row">
+                        <input id="radio16" type="radio" name="fieldset-example2">
+                        <label for="radio16">choice 4</label>
+                    </div>
+                </fieldset>
+
+                <section class="field-row" style="justify-content: flex-end">
+                    <button>button1</button>
+                    <button>button2</button>
+                </section>
+            </div>          
+        </div>
+
+        <div class="window" style="margin: 32px; width: 250px; position: absolute;top: calc(70% - 90px)">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                basic window
+                </div>
+
+                <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="field-row-stacked" style="width: 200px">
+                    <label for="text18">textbox 1</label>
+                    <input id="text18" type="text" />
+                </div>
+                <div class="field-row-stacked" style="width: 200px">
+                    <label for="text19">textbox 2</label>
+                    <input id="text19" type="text" />
+                </div>
+
+                <div class="field-row-stacked" style="width: 200px">
+                    <label for="text20">multiline textbox</label>
+                    <textarea id="text20" rows="8"></textarea>
+                </div>
+
+                <section class="field-row" style="justify-content: flex-end">
+                    <button>button1</button>
+                    <button>button2</button>
+                </section>
+            </div>
+        </div>
+    
+        <!-- <div id="welcome" style="border:solid; display: flex; flex-direction: column; border-radius: 16px; position: absolute;top: calc(50% - 90px); left: calc(50%-180px); backdrop-filter: blur(4px); background-image: linear-gradient(#0B274C,#1E2F2B);">
+            <div id="welcomeheader"
+            style="width: 100%; display: flex; align-items: center; cursor: move; justify-content: space-between; margin-top: 8px">
+                <div id="welcomeclose" style="width: 16px; height: 16px; cursor: pointer; background-color: rgb(104, 8, 8); border-radius: 16px; border: solid 1px rgba(0,0,0,.25); margin-left: 16px;">
+
+                </div>
+                <p style="margin: 0px; color: rgb(159, 167, 241); font-weight: 500">welcome</p>
+                <div style="width: 16px; margin-right: 6px; height: 16px;">
+                </div>
+            </div>
+            <div style="background-image: linear-gradient(rgba(150, 96, 116, 0.6),rgba(92, 152, 130, 0.6));; margin: 6px; border-radius: 12px; width: 360px; padding: 16px;">
+                <h1 style="margin: 10px; color: rgb(7, 15, 87)">is this thing on?</h1>
+                <h2 style="margin: 10px; color: rgb(7, 15, 87)">this is my first time playing with html</h2>
+                <p style="margin: 10px; color: rgb(7, 15, 87)">(if i don't count my tumblr days of stumbling my way through someone else's code)</p>
+            </div>
+        <div> -->
+
+    <script src="script.js"></script>
+
+  </body>
+
+</html>
+
+    <!-- </div>
+        <img src="./vanilla.jpg"
+        alt="alt text" 
+        width="300"
+        height="300"/>
+        <img style="width: 256px; height: fit-content"
+        src="almond.jpg" />
+        
+        <p></p>
+        
+        <a href="https://fynthesizer.github.io/Drip/"
+        >here</a> is how you link a website
+        <p></p>
+        
+        <s>Strike Through</s>
+        <p>break the </br> line like this</p>
+        <p>use strong to <strong>bold text</strong></p>
+        <p> <dfn>DFN Tag</dfn> is a tag that marks something being defined</p>
+        <p><abbr title="abbreviation">abbr</abbr> is a tag that marks an abbreviated term</p>
+        <p style="color: red">This text is red</p>
+    </div> -->
+
+        <!-- style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: solid; padding: 16px; border-width: 1em; background-color: #69beb3c2" -->

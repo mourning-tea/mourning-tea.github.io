@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!--<link rel="stylesheet" href="code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">-->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="./Kosugi_Maru.woff2">
+    <link rel="preload" as="image" href="./desktop icons/larger/me-icon-splash.png">
+    <link rel="preload" as="image" href="./grid1.jpeg">
+    <title>Grovy</title>
+    <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
+    <meta name="description" content="Illustrator, graphic designer, web developer. Welcome to a grovy corner of the web.">
+</head>
+<div class="preloader">
+    <div class="loading-img-bounce"></div>
+    <div class="loading-text">Loading....<span id="progress">0%</span></div><br><br>
+    <div class="loading-container">
+        <div class="loading-block" id="block1"></div>
+        <div class="loading-block" id="block2"></div>
+        <div class="loading-block" id="block3"></div>
+        <div class="loading-block" id="block4"></div>
+        <div class="loading-block" id="block5"></div>
+        <div class="loading-block" id="block6"></div>
+        <div class="loading-block" id="block7"></div>
+        <div class="loading-block" id="block8"></div>
+        <div class="loading-block" id="block9"></div>
+        <div class="loading-block" id="block10"></div>
+        <div class="loading-block" id="block11"></div>
+        <div class="loading-block" id="block12"></div>
+        <div class="loading-block" id="block13"></div>
+        <div class="loading-block" id="block14"></div>
+        <div class="loading-block" id="block15"></div>
+        <div class="loading-block" id="block16"></div>
+        <div class="loading-block" id="block17"></div>
+        <div class="loading-block" id="block18"></div>
+        <div class="loading-block" id="block19"></div>
+        <div class="loading-block" id="block20"></div>
+    </div>
+</div>
+<div class="entire-website">
+    <div class="desktop-bg">
+        <div class="top-nav"><marquee behavior="scroll" direction="left">Announcement</marquee></div>
+        <div class="desk-icons-wrapper">
+            <a class="desktop-icon" id="about-icon" href="#popup-about" data-target="about-btn"><img alt="pixelated icon of retro monitor" src="./desktop icons/me-icon.png"> <span class="icon-text">About</span></a>
+            <a class="desktop-icon" id="chat-icon" href="#popup-chat" data-target="chat-btn"><img alt="pixelated icon of two bald people, like msn messenger logo" src="./desktop icons/chat-icon.png"> <span class="icon-text">Chatbox</span></a>
+            <a class="desktop-icon" id="shop-icon" href="https://grovy.space/shop" target="_blank"><img alt="pixelated icon of storefront, looks like juicebox" src="./desktop icons/shop-icon.png"> <span class="icon-text">My Shop</span></a>
+            <a class="desktop-icon" id="contact-icon" href="#popup-contact" data-target="contact-btn"><img alt="pixelated icon of mailbox with happy face" src="./desktop icons/contact-icon.png"> <span class="icon-text">Contact</span></a>
+            <a class="desktop-icon" id="music-icon" href="#" data-target="music-btn"><img alt="pixelated icon of minidisc" src="./desktop icons/music-icon.png"> <span class="icon-text">Music</span></a>
+            <a class="desktop-icon" id="FAQ-icon" href="#popup-FAQ" data-target="FAQ-btn"><img alt="pixelated question mark" src="./desktop icons/FAQ-icon.png"> <span class="icon-text">FAQs</span></a>
+        </div>
+        <div class="desk-icons-wrapper right">
+            <a class="desktop-icon" id="portfolio-icon" href="#popup-portfolio" data-target="portfolio-btn"><img alt="pixelated icon of frog peeking out from folder" src="./desktop icons/portfolio-icon.png"> <span class="icon-text">Portfolio</span></a>
+            <a class="desktop-icon" id="lore-icon" href="#popup-lore" data-target="lore-btn"><img alt="pixelated icon of fish looking out a window" src="./desktop icons/fish-lore.png"><span class="icon-text">My Lore</span></a>
+            <a class="desktop-icon" id="notepad-icon" href="#popup-notepad" data-target="notepad-btn"><img alt="pixelated drawing of a notepad with googly eyes" src="./desktop icons/notepad-icon 2.png"> <span class="icon-text">Notepad</span></a>
+            <a class="desktop-icon" id="search-icon" href="#popup-search" data-target="search-btn"><img alt="pixelated icon of magnifying glass" src="./desktop icons/search-icon.png"> <span class="icon-text">Search</span></a>
+            <a class="desktop-icon" id="ig-icon" href="#popup-ig" data-target="ig-btn"><img alt="pixelated icon of camera with googly eyes" src="./desktop icons/ig-icon.png"> <span class="icon-text">Instagram</span></a>
+            <a class="desktop-icon" id="aff-icon" href="#popup-aff" data-target="aff-btn"><img alt="pixelated icon of chainlink" src="./desktop icons/links-icon.png"> <span class="icon-text">My Links</span></a>
+        </div>
+        <div class="desk-icons-wrapper" style="left:190px;">
+            <a class="desktop-icon" id="blog-icon" href="#popup-blog" data-target="blog-btn"><img alt="pixelated icon of yellow notepad" src="./desktop icons/notepad-icon copy.png"> <span class="icon-text">Blog</span></a>
+            <a class="desktop-icon" id="signup-icon" href="#popup-signup" data-target="signup-btn"><img alt="pixelated icon of mail letter" src="./desktop icons/signup-icon.png"> <span class="icon-text">E-Signup</span></a>
+        </div>
+        <div id="app" style="position:fixed;right:150px;bottom:300px;"></div>
+        <div class="popup nopen" id="popup-ig" title="Instagram.exe">
+           <div id="instagram-feed-container"></div>
+        </div>
+        <div class="popup open lazyhtml" id="popup-chat" title="Chatbox" style="overflow:hidden;" data-lazyhtml onvisible>
+            <script type="text/lazyhtml">
+            <iframe loading="lazy" src="https://www3.cbox.ws/box/?boxid=3532028&boxtag=2Kyawg" style=" margin-left: -8px;
+            margin-top: -10px;
+            width: calc(100% + 16px);
+            height: calc(100% + 18px);" allowtransparency="yes" allow="autoplay"  scrolling="auto">Loading..</iframe>
+            </script>
+        </div>
+        <div class="popup nopen tabbed" id="popup-about" title="About">
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">This Website</a></li>
+                    <li><a href="#tabs-2">About Me</a></li>
+                </ul>
+                <div id="tabs-1" class="lazyhtml" data-lazyhtml onvisible>
+                    <script type="text/lazyhtml">
+                    <div style="display:flex;justify-content:center;align-items:center">
+                        <img width="100" height="96.2" src="desktop icons/larger/me-icon copy.png" style="margin:10px;">
+                        <h2>Welcome to<br>GrovyOS </h2>
+                    </div>
+                    <br>
+                    This website is hand coded with love, HTML, CSS, and the Jquery javascript library. Features of this website include: 
+                    <ul>
+                        <li>draggable windows</li>
+                        <li>tabs in the 'About' window</li>
+                        <li>minimizable/maximizable windows</li>
+                        <li>a music player</li>
+                        <li>button along the bottom that corresponds with whether window is active or not</li>
+                        <li>an instagram widget</li>
+                        <li>toggle menu</li>
+                        <li>clock</li>
+                    </ul>
+                </script>
+                </div>
+                <div id="tabs-2" class="lazyhtml" data-lazyhtml onvisible>
+                    <script type="text/lazyhtml">
+                    <h2>Hello! Welcome to grovy.space, my little corner of the internet.</h2>
+                    <img src="https://grovy.space/wp-content/uploads/2025/01/me-1000x1000.webp?6ailr0uX" style="width: 230px; float:left;border-radius: 50% 50% 10% 10%;margin-right: 16px;">
+            <p> I am an illustrator, web developer (hence this website hehe), graphic designer, and photographer (photo of me here is a self portrait). You may also know me as a content creator from @itsgrovy on tiktok for my silly t shirt designs and stationery. Anything creatively-oriented
+                and digital<code>&#8212;</code>I'm there. Being a self-starting multihyphenate, I am always excited to pick up new skills.</p> <br>
+            <p> This website was coded, designed and illustrated by me. Hope you explore around and enjoy. If you want to reach out for a brand collaboration, website design, branding, or illustration, contact me at hello@grovy.space.</p>
+        </script>
+                </div>
+            </div>
+            </div>
+        <div class="popup nopen" id="popup-search" title="Search"></div>
+        <div class="popup nopen lazyhtml" id="popup-lore" title="The Lore" data-lazyhtml onvisible>
+            <script type="text/lazyhtml">
+            <h2>How It All Began</h2>
+            <br>
+            <p>On September 3rd 2021, I'd halfheartedly posted this tweet (as one does with Twitter) about a logo design that was rejected.
+                <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">my rejected logo idea for my friends boba shop <a href="https://t.co/TWClN10WAY">pic.twitter.com/TWClN10WAY</a></p>&mdash; GrovyðŸ¥­ (@grovymango) <a href="https://twitter.com/grovymango/status/1433786681149333505?ref_src=twsrc%5Etfw">September 3, 2021</a></blockquote>
+                (Fun fact: back in March, in a now deleted tweet, I posted the same fish but with the caption: "gay little fish") <br>The tweet went viral and 5 people asked for t shirts of the design. I was so excited and setup grovy.space 4 days later, filled with giddy and adrenaline
+                as seen here:</p><br>
+            <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">GUYS HOLY SHIT I BUILT AND DESIGNED MY WEBSITE !!!! GO CHECK IT OUT AT <a href="https://t.co/6iEhbRRNSE">https://t.co/6iEhbRRNSE</a> !! all the boba koi stuff are $15-25!! <a href="https://t.co/SA3nalBUJL">pic.twitter.com/SA3nalBUJL</a></p>&mdash;
+                GrovyðŸ¥­ (@grovymango) <a href="https://twitter.com/grovymango/status/1435717340554006533?ref_src=twsrc%5Etfw">September 8, 2021</a></blockquote><br> One person got the koi design tattooed and it made me realize I could make whimsical
+            silly designs that can be enjoyed and loved by many.<br>
+            <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">SOMEONE GOT THIS TATTOOED AHHH IM SCREAMING <a href="https://t.co/LH0CgdUMyk">https://t.co/LH0CgdUMyk</a> <a href="https://t.co/oAKA8cJUbd">pic.twitter.com/oAKA8cJUbd</a></p>&mdash; GrovyðŸ¥­ (@grovymango) <a href="https://twitter.com/grovymango/status/1434621732447522818?ref_src=twsrc%5Etfw">September 5, 2021</a></blockquote><br>I
+            got so excited I made a tiktok about it, and it exploded from there. I then reposted the tiktok to my instagram and it also drew a large audience. Since then, my love for illustration was renewed and I continued to create more designs
+            that are well loved by my audience. I am forever grateful for the chance to make silly art and have a little community that celebrates that.
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@itsgrovy/video/7006364381529378053" data-video-id="7006364381529378053" style="max-width: 605px;min-width: 325px;">
+                <section> <a target="_blank" title="@itsgrovy" href="https://www.tiktok.com/@itsgrovy?refer=embed">@itsgrovy</a></section>
+            </blockquote>
+            
+                <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <script defer src="https://www.tiktok.com/embed.js"></script>
+            </script>
+        
+        </div>
+        <div class="popup nopen" id="popup-FAQ" title="FAQ">
+            <em> <strong>Q:What should I call you? What is your name?</strong></em>
+            <br>
+            <p>You can call me Grovy. Or Grovy Mango. I like being semi anonymous.</p><br>
+            <br>
+            <em> <strong>Q:Why Grovy? What does it stand for?</strong></em>
+            <br>
+            <p>A: A conjunction of the words groovy and grove. I love music, especially funk-jazz fusion, hence the word groovy, and I love nature. The word grove makes such a soothing warm sound. Grovy = trees dancing</p><br>
+            <em> <strong>Q:How are your prices low?</strong></em>
+            <br>
+            <p>A: I'm lucky to be able to protect my margins with my experience in coding! I'm able to independently set up and code a website, find hosting without a middleman service. If I sold my items with the same prices on Redbubble, Society6, teespring,
+                Shopify, Squarespace, Etsy, Big Cartel, I'd make a lot less, because those platforms would take a larger cut. It's kind of like, renting vs. owning. That, and because of my internet following that helps drive sales volume, which leads to smaller unit prices for the items in my shop.</p><br>
+            <em><strong>Q:Why are your prices low?</strong></em>
+            <br>
+            <p>A: I do it for my audience of single mothers, broke college students and silly people. And besides, my clothing items are Gildan. I've already put in the work (web dev + marketing) to be able to have low prices but also a decent profit margin
+                :-) </p>
+            <br>
+            <p><strong><em>Q: Where did you learn how to code?</em></strong></p>
+            <p>A: <a href="https://freecodecamp.com" target="_blank">Freecodecamp.com</a> is my bestie. Self taught. But before freecodecamp.com, in middle school, I took blogspot.com too seriously. </p>
+            <br>
+
+        </div>
+        
+        <div class="popup open" id="popup-blog" title="Blog">
+            <div id="post-details-container">
+                <h2 id="post-title"></h2>
+                <p id="post-date"></p>
+                <div id="post-content"></div>
+            </div>
+        </div>
+        <div class="popup nopen" id="popup-contact" title="Contact" style="padding-right:0; padding-top:0; padding-bottom:0;overflow:hidden;">
+            <iframe id="contact-iframe" src="" loading="lazy" scrolling="yes" style="border-top:2px solid black;border-left:none;">Loading..</iframe>
+
+        </div>
+        <div class="popup nopen" id="popup-portfolio" title="Portfolio" style="padding-right:0; padding-top:0; padding-bottom:0;overflow:hidden;">
+            <iframe id="portfolio-iframe" src="" loading="lazy" scrolling="yes">Loading..</iframe>
+
+        </div>
+        <div class="popup nopen" id="popup-aff" title="Links ">
+           <p>
+            You can find me on:
+            <br>
+            <ul>
+                <li>tiktok (lol) at <a target="_blank" href="https://www.tiktok.com/@itsgrovy">@itsgrovy</a>
+                </li>
+                <li>instagram (for art) at <a target="_blank" href="https://www.instagram.com/grovy.inc">@grovy.inc</a></li>
+                <li>instagram (personal) at <a target="_blank" href="https://www.instagram.com/grovymango">@grovymango</a></li>
+                <li>youtube at <a target="_blank" href="https://www.youtube.com/@itsgrovy">@itsgrovy</a></li>
+            </ul>
+             </p>
+        </div>
+        <div class="popup nopen" id="popup-notepad" title="Notepad">
+            <div id="notepad-blackline"></div>
+            <textarea placeholder="Type whatever you want here" id="notepad-input"></textarea>
+            <p id="log"></p>
+        </div>
+        <div class="popup nopen lazyhtml" id="popup-signup" title="Email Newsletter Signup" style="padding-right:0; padding-top:0; padding-bottom:0;overflow:hidden;" data-lazyhtml onvisible>
+            <script type="text/lazyhtml">
+                <iframe id="signup-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSf8ume6afWFKDzWywl7NnC957Ow2G3hH-TRmDo53rRxSKv1hw/viewform?embedded=true" loading="lazy" scrolling="yes">Loading..</iframe>
+            </script>
+
+        </div>
+    </div>
+    <div class="start-menu-wrapper">
+        <div class="start-strip">
+            <div class="start-text-rotate">GrovyOS 2000</div>
+        </div>
+        <div class="start-menu-text">
+            <a class="menu-child" href="https://tiktok.com/@itsgrovy" target="_blank">Tiktok </a>
+            <hr>
+            <a class="menu-child" href="https://instagram.com/grovy.inc" target="_blank">Instagram</a>
+            <hr>
+            <a class="menu-child" href="https://instagram.com/grovymango" target="_blank">Personal IG</a>
+            <hr>
+            <a class="menu-child" href="https://youtube.com/@itsgrovy" target="_blank">Youtube</a>
+            <hr>
+            <a class="menu-child" href="https://www.pinterest.ca/grovygai/" target="_blank">Pinterest</a>
+            <hr>
+            <a class="menu-child" href="https://grovy.space/shop" target="_blank">My Shop</a>
+
+        </div>
+    </div>
+
+    <div class="taskbar">
+        <div class="home-button">Menu</div>
+        <div class="bar-buttons">
+            <a class="bar-button" href="#popup-about" id="about-btn">About</a>
+            <a class="bar-button" href="#popup-lore" id="lore-btn">Lore</a>
+            <a class="bar-button" id="music-btn">Music</a>
+            <a class="bar-button" href="#popup-portfolio" id="portfolio-btn">Portfolio</a>
+            <a class="bar-button" href="#popup-contact" id="contact-btn">Contact</a>
+            <a class="bar-button" href="#popup-aff" id="aff-btn">Links</a>
+            <a class="bar-button" href="#popup-search" id="search-btn">Search</a>
+            <a class="bar-button" href="#popup-FAQ" id="FAQ-btn">FAQs</a>
+            <a class="bar-button" href="#popup-notepad" id="notepad-btn">Notepad</a>
+            <a class="bar-button" href="#popup-chat" id="chat-btn">Chatbox</a>
+            <a class="bar-button" href="#popup-ig" id="ig-btn">Instagram</a>
+            <a class="bar-button" href="#popup-blog" id="blog-btn">Blog</a>
+            <a class="bar-button" href="#popup-signup" id="signup-btn">Sign Up</a>
+        </div>
+        <span id="clock"></span>
+    </div>
+</div>
+
+
+</html>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js" integrity="sha256-sw0iNNXmOJbQhYFuC9OF2kOlD5KQKe1y5lfBn4C9Sjg=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/lazyhtml@1.0.0/dist/lazyhtml.min.js" crossorigin="anonymous" debug></script>
+<script async src="https://connect.facebook.net/en_US/sdk.js"></script>
+<script async src="ig-widget.js"></script>
+<script src="dialogExtend.js"></script>
+<script src="button-toggle-updated.js"></script>
+<script defer src="webamp-updated.js"></script>
+<script src="clock.js"></script>
+<script>
+        
+</script>
+<script>
+    $("#tabs").tabs();
+    $("#popup-search").load("/search .container").dialog({'height': 243});
+    $("#popup-chat").dialog({'width': 266,'height':400});
+    $("#popup-portfolio").dialog({"width": $(window).width() * 0.7,"height": $(window).height() * 0.7});
+    $("#popup-portfolio").dialog({
+    open: function() {
+        var iframe = $("#portfolio-iframe");
+        if (!iframe.attr("src")) {
+            iframe.attr("src", "/portfolio/"); 
+            console.log("Iframe content loaded.");
+        }
+    }
+});
+$("#popup-contact").dialog({
+    open: function() {
+        var iframe = $("#contact-iframe");
+        if (!iframe.attr("src")) {
+            iframe.attr("src", "/contact-me/"); 
+            console.log("Iframe content loaded.");
+        }
+    }
+});
+
+    $("#popup-lore").dialog({
+    open: function() {
+        $.getScript("https://www.tiktok.com/embed.js")
+            .done(function() {
+                console.log("TikTok script loaded successfully.");
+            })
+            .fail(function() {
+                console.error("Failed to load TikTok script.");
+            });
+        $.getScript("https://platform.twitter.com/widgets.js")
+            .done(function() {
+                console.log("Twitter script loaded successfully.");
+            })
+            .fail(function() {
+                console.error("Failed to load Twitter script.");
+            });
+    }
+});
+</script>
+
+<script>
+    var BlogContent = $("#popup-blog.ui-dialog-content");
+    var BlogNav = $("<div class='blog-nav'></div>")
+    var BlogContainer = $("<div class='blog-container'></div>");
+
+    BlogNav.insertBefore(BlogContent);
+    BlogNav.add(BlogContent).wrapAll(BlogContainer);
+</script>
+<script>
+$(document).ready(function () {
+    // Define the API URL
+    var apiUrl = '/wp-json/wp/v2/posts?per_page=8'; // Change the per_page value as needed
+
+    // Fetch list of posts
+    $.ajax({
+        url: apiUrl,
+        type: 'GET',
+        success: function (data) {
+            if (data.length > 0) {
+                var postTitles = '';
+                data.forEach(function (post) {
+                    postTitles += '<a class="post-title-nav" data-post-id="' + post.id + '" href="#">' + post.title.rendered + '</a><br><br>';
+                });
+
+                // Display post titles
+                $('.blog-nav').html(postTitles);
+
+                // Automatically load the first post details (default post view)
+                fetchPostDetails(data[0].id);
+
+                // Attach click event handler to post titles
+                $('.post-title-nav').click(function () {
+                    var postId = $(this).data('post-id');
+                    fetchPostDetails(postId);
+                });
+            } else {
+                $('.blog-nav').html('<p>No posts found.</p>');
+            }
+        },
+        error: function () {
+            $('.blog-nav').html('<p>Error fetching posts.</p>');
+        }
+    });
+
+    // Function to fetch and display post details
+    function fetchPostDetails(postId) {
+        var postUrl = '/wp-json/wp/v2/posts/' + postId;
+
+        $.ajax({
+            url: postUrl,
+            type: 'GET',
+            success: function (post) {
+                // Display post details
+                var postDate = new Date(post.date);
+                var formattedDate = postDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                
+                $('#post-title').text(post.title.rendered);
+                $('#post-date').text('Date: ' + formattedDate);
+                $('#post-content').html(post.content.rendered);
+            },
+            error: function () {
+                $('#post-details-container').html('<p>Error fetching post details.</p>')
+            }
+        });
+    }
+});
+
+</script>
+<script>
+    new Webamp({
+        initialTracks: [
+            {
+                metaData: {
+                    artist: "Grovy",
+                    title: "I Luv Strolls.mp3",
+                },
+                url: "./I-Luv-Strolls.mp3",
+            },
+            {
+                metaData: {
+                    artist: "Grovy",
+                    title: "Melancholic Kettle",
+                },
+                url: "./Melancholic-Flute.mp3",
+            },
+            {
+                metaData: {
+                    artist: "Grovy",
+                    title: "Hot Fart Buns.mp3",
+                },
+                url: "./Hot-Fart-Buns.mp3",
+            },
+        ],
+        initialSkin: {
+            url: "./GROVYAMP.wsz"
+        },
+    }).renderWhenReady(app);
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+            const loadingBlocks = document.querySelectorAll(".loading-block");
+            const content = document.querySelector(".entire-website");
+            const totalBlocks = loadingBlocks.length;
+            let loadedBlocks = 0;
+
+            const updateLoadingProgress = () => {
+                loadedBlocks++;
+                loadingBlocks[loadedBlocks - 1].style.opacity = 1;
+
+                const progress = (loadedBlocks / totalBlocks) * 100;
+                document.getElementById("progress").textContent = `${Math.round(progress)}%`;
+
+                if (loadedBlocks === totalBlocks) {
+                    // All blocks are loaded
+                    content.style.display = "block";
+                    document.querySelector(".preloader").style.display = "none";
+                }
+            };
+
+            // Function to update loading blocks when a resource is loaded
+            const resourceLoaded = () => {
+                updateLoadingProgress();
+            };
+
+            // Attach the resourceLoaded function to various resources within "entire-website"
+            const resourcesToLoad = content.querySelectorAll("img, script, link[href], audio, video");
+            const totalResources = resourcesToLoad.length;
+            
+            resourcesToLoad.forEach(resource => {
+                resource.addEventListener("load", resourceLoaded);
+                resource.addEventListener("error", resourceLoaded); // Handle errors as well
+            });
+
+            // Start simulating loading (you can replace this with your actual loading logic)
+            const simulateLoading = () => {
+                // Simulate loading by incrementally updating progress
+                for (let i = 0; i < totalBlocks; i++) {
+                    setTimeout(updateLoadingProgress, i * 60); // Adjust the interval as needed
+                }
+            };
+
+            // Start simulating loading
+            simulateLoading();
+        });
+</script>

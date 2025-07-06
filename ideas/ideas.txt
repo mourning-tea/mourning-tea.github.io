@@ -1,0 +1,9 @@
+- guestbook
+- tea page
+- music pages
+    - last.fm
+    - physical music collection
+- cat page
+- food page
+- coding projects
+- covid resources
